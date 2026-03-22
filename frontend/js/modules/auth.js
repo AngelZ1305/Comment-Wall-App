@@ -28,11 +28,16 @@ export async function login() {
       throw new Error(data?.error || "Login failed");
     }
 
+    const user = data?.user;
+    if (!user?.email) {
+      throw new Error("Login response is missing user data");
+    }
+
     setCurrentUser({
-      name: data?.user?.name,
-      email: data?.user?.email
+      name: user?.name,
+      email: user?.email
     });
-    setAuthStatus(`Signed in: ${data.user.email}`, "completed");
+    setAuthStatus(`Signed in: ${user.email}`, "completed");
     setFeedback("Login successful", "completed");
     passwordInput.value = "";
 
