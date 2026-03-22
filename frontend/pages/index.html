@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Comment Portal</title>
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/delete-modal.css" />
+</head>
+
+<body>
+  <header class="principal-header">
+    <h1>Comment Wall App</h1>
+  </header>
+
+  <main class="container-main">
+    <section class="card access-card">
+      <h2>Log in</h2>
+      <p class="section-copy">Log in to post and manage comments.</p>
+      <input type="email" id="email" placeholder="Email address" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <div class="actions">
+        <button id="loginButton">Log in</button>
+        <button id="logoutButton">Log out</button>
+      </div>
+
+      <p id="authStatus"></p>
+      <p id="errorMsg"></p>
+    </section>
+
+    <section class="card comments-card">
+      <div class="section-head">
+        <h2>Comments</h2>
+        <span id="progressText" class="counter-pill">0 comments</span>
+      </div>
+
+      <div class="container-comment">
+        <h3>Add New Comment</h3>
+        <div class="row">
+          <input id="commentTitle" maxlength="150" type="text" placeholder="Write your comment here..." />
+          <button id="addButton" aria-label="Post comment" title="Post comment">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="msg" class="loading">Loading comments...</div>
+
+      <ul id="commentList"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+
+</html>

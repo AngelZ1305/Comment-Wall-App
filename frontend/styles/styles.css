@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #050609;
+  background: #EAF4EC;
+}
+
+.principal-header {
+  padding: 30px;
+  text-align: center;
+}
+
+.principal-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.4px;
+}
+
+.principal-header p {
+  margin: 10px auto 0;
+  max-width: 700px;
+  color: #050609b3;
+}
+
+.container-main {
+  width: min(90rem, 94vw);
+  margin: 0 auto 36px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 22px;
+}
+
+.card {
+  border: 1px solid #003e1f33;
+  border-radius: 16px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 18px 30px #0506092e;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.section-copy {
+  margin: 10px 0 16px;
+  color: #050609b3;
+  font-size: 0.95rem;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #003e1f4d;
+  color: #050609;
+  background: #ffffff;
+  outline: none;
+}
+
+input:focus {
+  border-color: #43B929;
+  box-shadow: 0 0 0 2px #43b92933;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #fff;
+  background: #43B929;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background: #003E1F;
+}
+
+#logoutButton,
+.delete {
+  background: #E63946;
+}
+
+.delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  line-height: 1;
+}
+
+.delete svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+#logoutButton:hover,
+.delete:hover {
+  background: #050609;
+}
+
+#authStatus,
+#errorMsg {
+  margin: 12px 0 0;
+  min-height: 18px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-pill {
+  font-size: 0.82rem;
+  background: #003E1F;
+  border: 1px solid #003E1F;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #F1FAEE;
+}
+
+.container-comment {
+  margin-top: 18px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #003e1f33;
+  border-radius: 12px;
+}
+
+.container-comment h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+#commentTitle {
+  margin-top: 0;
+  flex: 1;
+}
+
+#addButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.row #addButton svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+.loading {
+  margin: 14px 0 8px;
+  color: #050609b3;
+}
+
+ul {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #003e1f66;
+  border-radius: 999px;
+}
+
+li {
+  background: #fff;
+  border: 1px solid #003e1f33;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.left {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.comment-user {
+  font-weight: 700;
+  color: #050609;
+}
+
+.comment-date {
+  font-size: 0.78rem;
+  color: #F1FAEE;
+  background: #003E1F;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.title {
+  margin: 0;
+  color: #050609;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.error {
+  color: #E63946;
+}
+
+.completed {
+  color: #43B929;
+}
+
+@media (max-width: 900px) {
+  .container-main {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .principal-header {
+    padding: 22px 14px;
+  }
+
+  .principal-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .principal-header p {
+    font-size: 0.92rem;
+  }
+
+  .container-main {
+    width: 94vw;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container-comment {
+    padding: 12px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  #addButton {
+    width: 100%;
+  }
+
+  ul {
+    max-height: 58vh;
+    padding-right: 0;
+  }
+
+  li {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .delete {
+    width: 100%;
+  }
+}
