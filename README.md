@@ -7,11 +7,11 @@ El proyecto está desplegado en Render y conectado a GitHub, por lo que cualquie
 Demo
 Frontend
 
-- https://taskmanagerapi-front.onrender.com/
+- https://comment-wall-app-1.onrender.com/
 
 Backend API
 
-- https://taskmanagerapi-sxsn.onrender.com/
+- https://comment-wall-app-back.onrender.com
 
 Tecnologías utilizadas
 Backend
@@ -52,13 +52,13 @@ El backend mantiene los comentarios en memoria, por lo que los datos se reinicia
 
 API Endpoints
 - Base URL
-https://taskmanagerapi-sxsn.onrender.com
+https://comment-wall-app-1.onrender.com/
 - Iniciar sesión
 POST /login
 Body
 {
   "email": "angel@email.com",
-  "password": "tu_password"
+  "password": "123456"
 }
 Respuesta exitosa
 {
@@ -149,7 +149,7 @@ Agregar en Render:
 
 - JWT_SECRET=<tu secreto>
 
-- CORS_ORIGIN=https://taskmanagerapi-front.onrender.com
+- CORS_ORIGIN=https://comment-wall-app-1.onrender.com/
 
 - NODE_ENV=production
 
@@ -169,7 +169,7 @@ En producción, la cookie de autenticación se configura con:
 
 Ejemplo:
 
-- CORS_ORIGIN=https://taskmanagerapi-front.onrender.com,http://localhost:5500
+- CORS_ORIGIN=https://comment-wall-app-1.onrender.com,http://localhost:5500
 
 El origen de la API en el frontend cambia automáticamente:
 
